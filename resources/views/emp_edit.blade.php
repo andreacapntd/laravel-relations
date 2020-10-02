@@ -23,7 +23,7 @@
     <div class="form_group">
 
       <label for="date_of_birth">DATE OF BIRTH</label>
-      <input type="date" name="date_of_birth" value=" {{ $emp -> date_of_birth }} ">
+      <input type="date" name="date_of_birth" value="{{$emp->date_of_birth}}">
 
     </div>
 
