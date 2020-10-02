@@ -39,4 +39,23 @@ class EmployeeController extends Controller
     return redirect() -> route('emp_index');
 
   }
+
+  public function edit($id) {
+
+    $emp = Employee::findOrFail($id);
+    $locs = Location::all();
+
+    return view('emp_edit', compact('emp', 'locs'));
+
+  }
+
+  public function update(Request $request, $id) {
+
+  $data = $request -> all();
+  $emp = Employee::findOrFail($id);
+  $emp -> update($data);
+
+  return redirect() -> route('emp_index');
+
+}
 }

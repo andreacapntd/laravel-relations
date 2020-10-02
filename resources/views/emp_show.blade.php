@@ -52,7 +52,19 @@
 
     </ul>
 
-    <a href="{{ route('emp_index')}}">Employees Home</a>
+    <ul>
+
+      <li>
+
+        <a href="{{ route('emp_edit', $emp -> id)}}">EDIT</a>
+
+      </li>
+      <li>
+
+        <a href="{{ route('emp_index')}}">EMPLOYESS HOME</a>
+
+      </li>
+    </ul>
 
   </section>
 @endsection
