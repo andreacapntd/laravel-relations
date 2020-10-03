@@ -51,11 +51,19 @@ class EmployeeController extends Controller
 
   public function update(Request $request, $id) {
 
-  $data = $request -> all();
-  $emp = Employee::findOrFail($id);
-  $emp -> update($data);
+   $data = $request -> all();
+   $emp = Employee::findOrFail($id);
+   $emp -> update($data);
 
-  return redirect() -> route('emp_index');
+   return redirect() -> route('emp_index');
 
-}
+  }
+
+  public function destroy($id) {
+
+    $emp = Employee::findOrFail($id);
+    $emp -> delete();
+
+    return redirect() -> route('emp_index');
+  }
 }

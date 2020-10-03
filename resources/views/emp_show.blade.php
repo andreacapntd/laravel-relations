@@ -59,6 +59,12 @@
         <a href="{{ route('emp_edit', $emp -> id)}}">EDIT</a>
 
       </li>
+
+      <li>
+
+        <a href="{{ route('emp_destroy', $emp -> id)}}">DELETE</a>
+
+      </li>
       <li>
 
         <a href="{{ route('emp_index')}}">EMPLOYESS HOME</a>
